@@ -29,8 +29,8 @@ int main() {
 
 
     // Calculando a densidade populacional e o PIB per capita
-    desidade_populacional = (float)populacao / area;
-    pib_per_capita = (float)pib / populacao;
+    desidade_populacional = populacao / area;
+    pib_per_capita = pib / populacao;
 
 
     // Atribuindo valores às variáveis da Carta 2
