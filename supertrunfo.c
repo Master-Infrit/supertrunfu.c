@@ -20,6 +20,8 @@ int main() {
     float desidade_populacional2;
     float pib_per_capita2;
 
+    
+
     // Atribuindo valores às variáveis da Carta 1
     strcpy(estado, "Rio de Janeiro");
     populacao = 17366189;
@@ -68,6 +70,16 @@ int main() {
     printf("Densidade Populacional: %.2f\n", desidade_populacional2);
     printf("PIB per Capita: %.2f\n", pib_per_capita2);
 
+    float super_poder1 = populacao + area + pib + pontos_turisticos + (desidade_populacional / pib_per_capita);
+    float super_poder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + (desidade_populacional2 / pib_per_capita2);
+
+    if (super_poder1 > super_poder2) {
+        printf("A carta 1 é mais forte!\n");
+    } else if (super_poder1 < super_poder2) {
+        printf("A carta 2 é mais forte!\n");
+    } else {
+        printf("As cartas são iguais!\n");
+    }
 
     return 0;
 }
