@@ -46,10 +46,35 @@ int main() {
     pib_per_capita2 = pib2 / populacao2;
     desidade_populacional2 = populacao2 / area2;
 
-    
-    printf("*** Meu Jogo de Cartas ***\n\n");
+    // Menu Interativo com Switch Case
+    printf("Bem-vindo ao Super Trunfo!\n");
+    printf("1: Iniciar o jogo\n");
+    printf("2: Regras do jogo\n");
+    printf("3: Sair\n");
+    printf("Escolha uma opção: ");
+    int opcao;
+    scanf("%d", &opcao);
+    switch (opcao) {
+        case 1:
+            printf("Iniciando o jogo...\n");
+            break;
+        case 2:
+            printf("Regras do jogo:\n");
+            printf("1. Cada jogador escolhe uma carta.\n");
+            printf("2. As cartas são comparadas com base em diferentes atributos.\n");
+            printf("3. O jogador com o maior valor em um atributo vence a rodada.\n");
+            printf("4. O pib per capita é calculado como PIB dividido pela população.\n");
+            break;
+        case 3:
+            printf("Saindo do jogo...\n");
+            return 0;
+        default:
+            printf("Opção inválida! Tente novamente.\n");
+            return 1;
+    }
+
     // Exibindo os dados da Carta 1
-    printf("Carta 1\n");
+  printf("Carta 1\n");
     printf("Estado: %s\n", estado);
     printf("População: %d\n", populacao);
     printf("Área: %.2f km²\n", area);
@@ -67,7 +92,7 @@ int main() {
     printf("PIB: %.2f bilhões\n", pib2);
     printf("Pontos Turísticos: %d\n", pontos_turisticos2);
     printf("Densidade Populacional: %.2f\n", desidade_populacional2);
-    printf("PIB per Capita: %.2f\n", pib_per_capita2);
+    printf("PIB per Capita: %.2f\n\n", pib_per_capita2);
 
     float super_poder1 = populacao + area + pib + pontos_turisticos + (desidade_populacional / pib_per_capita);
     float super_poder2 = populacao2 + area2 + pib2 + pontos_turisticos2 + (desidade_populacional2 / pib_per_capita2);
